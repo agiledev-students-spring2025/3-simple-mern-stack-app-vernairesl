@@ -8,7 +8,7 @@ const AboutUs = () => {
       <p>I am also a lazyass so I decided to leave this page undecorated. </p>
       <p>Anyway, here is a photo of me</p>
       <p> </p>
-      <img src="http://localhost:5002/images/photoOfMyself.jpg" alt="picOfMe" />
+      <img src="http://localhost:5002/image/photoOfMyself.jpg" alt="picOfMe" />
     </div>
   );
 };
