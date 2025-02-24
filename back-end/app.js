@@ -1,5 +1,6 @@
 require('dotenv').config({ silent: true }) // load environmental variables from a hidden file named .env
 const express = require('express') // CommonJS import style!
+const path = require('path');
 const morgan = require('morgan') // middleware for nice logging of incoming HTTP requests
 const cors = require('cors') // middleware for enabling CORS (Cross-Origin Resource Sharing) requests.
 const mongoose = require('mongoose')
