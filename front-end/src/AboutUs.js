@@ -3,8 +3,10 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <div>
-      <h1>Hi!My name is Sandy!</h1>
-      <p>I'm a student who loves animals and sports!</p>
+      <h1>Hi!</h1>
+      <p>My name is Sandy! I'm a student who loves animals and sports! </p>
+      <p>I am also a lazyass so I decided to leave this page undecorated. </p>
+      <img src="http://localhost:5002/images/photoOfMyself.jpg" alt="picOfMe" />
     </div>
   );
 };

@@ -20,11 +20,13 @@ mongoose
   .then(data => console.log(`Connected to MongoDB`))
   .catch(err => console.error(`Failed to connect to MongoDB: ${err}`))
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/api/about', (req, res) => {
   res.json({
     name: 'Sandy Li',
     bio: 'A lazyass student that loves sports',
-    photoUrl: '',
+    photoUrl: 'http://localhost:5002/images/photoOfMyself.jpg',
   });
 });
 
