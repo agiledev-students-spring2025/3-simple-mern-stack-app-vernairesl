@@ -12,11 +12,21 @@ app.use(cors()) // allow cross-origin resource sharing
 app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
 
+console.log('DB Connection String:', process.env.DB_CONNECTION_STRING);
+
 // connect to database
 mongoose
   .connect(`${process.env.DB_CONNECTION_STRING}`)
   .then(data => console.log(`Connected to MongoDB`))
   .catch(err => console.error(`Failed to connect to MongoDB: ${err}`))
+
+app.get('/api/about', (req, res) => {
+  res.json({
+    name: 'Sandy Li',
+    bio: 'A lazyass student that loves sports',
+    photoUrl: '',
+  });
+});
 
 // load the dataabase models we want to deal with
 const { Message } = require('./models/Message')
